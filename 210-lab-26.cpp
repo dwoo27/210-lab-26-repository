@@ -16,25 +16,26 @@ const string INSERT_VAL = "TESTCODE";
 const int SIM = 15;
 
 // functions for read timing functions/also called to reset containers
-int readVector(vector<string>& v, string data[]);
-int readList(list<string>& l, string data[]);
-int readSet(set<string>& s, string data[]);
+double readVector(vector<string>& v, string data[]);
+double readList(list<string>& l, string data[]);
+double readSet(set<string>& s, string data[]);
 
 // functions for sort timing functions
-int sortVector(vector<string> v);
-int sortList(list<string> l);
+double sortVector(vector<string> v);
+double sortList(list<string> l);
 
 // functons for insert timing functions
-int insertVector(vector<string> v);
-int insertList(list<string> l);
-int insertSet(set<string> s);
+double insertVector(vector<string> v);
+double insertList(list<string> l);
+double insertSet(set<string> s);
 
 // functions for delete timing functions
-int deleteVector(vector<string> v);
-int deleteList(list<string> l);
-int deleteSet(set<string> s);
+double deleteVector(vector<string> v);
+double deleteList(list<string> l);
+double deleteSet(set<string> s);
 
 int main() {
+   
     // open file and read codes into array
     ifstream fin;
     fin.open("codes.txt");
@@ -98,7 +99,7 @@ int main() {
         //loops to add current data to accumulate
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 3; j++) {
-                results[1][i][j] += results[0][i][j];
+                results[1][i][j] += results[0][i][j]; //stores accumulated val but not avg
             }
         }
     }
@@ -106,14 +107,16 @@ int main() {
 
     // display all times
     cout << "Number of simulations: " << SIM << endl;
+    
+    cout << fixed << setprecision(0);
 
-    cout << left << setw(12) << "Operation"
+    cout << right << setw(12) << "Operation"
         << setw(12) << "Vector"
         << setw(12) << "List"
         << setw(12) << "Set" << endl;
 
     cout << right << setw(12) << "Read"
-        << setw(12) << results[1][0][0] / SIM
+        << setw(12) << results[1][0][0] / SIM // divide by # sims each time to output avg
         << setw(12) << results[1][0][1] / SIM
         << setw(12) << results[1][0][2] / SIM << endl;
 
@@ -132,11 +135,10 @@ int main() {
         << setw(12) << results[1][3][1] / SIM
         << setw(12) << results[1][3][2] / SIM << endl;
 
-
 }
 
 // read data into vector and return time
-int readVector(vector<string>& v, string data[]) {
+double readVector(vector<string>& v, string data[]) {
     // start timer
     auto start = high_resolution_clock::now();
 
@@ -155,7 +157,7 @@ int readVector(vector<string>& v, string data[]) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int readList(list<string>& l, string data[]) {
+double readList(list<string>& l, string data[]) {
     auto start = high_resolution_clock::now();
 
     l.clear();
@@ -169,7 +171,7 @@ int readList(list<string>& l, string data[]) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int readSet(set<string>& s, string data[]) {
+double readSet(set<string>& s, string data[]) {
     auto start = high_resolution_clock::now();
 
     s.clear();
@@ -183,7 +185,7 @@ int readSet(set<string>& s, string data[]) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int sortVector(vector<string> v) {
+double sortVector(vector<string> v) {
     auto start = high_resolution_clock::now();
 
     sort(v.begin(), v.end());
@@ -193,7 +195,7 @@ int sortVector(vector<string> v) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int sortList(list<string> l) {
+double sortList(list<string> l) {
     auto start = high_resolution_clock::now();
 
     l.sort();
@@ -203,7 +205,7 @@ int sortList(list<string> l) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int insertVector(vector<string> v) {
+double insertVector(vector<string> v) {
     auto start = high_resolution_clock::now();
 
     auto it = v.begin() + v.size() / 2;
@@ -215,7 +217,7 @@ int insertVector(vector<string> v) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int insertList(list<string> l) {
+double insertList(list<string> l) {
     auto start = high_resolution_clock::now();
 
     auto it = l.begin();
@@ -228,7 +230,7 @@ int insertList(list<string> l) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int insertSet(set<string> s) {
+double insertSet(set<string> s) {
     auto start = high_resolution_clock::now();
 
     s.insert(INSERT_VAL);
@@ -238,7 +240,7 @@ int insertSet(set<string> s) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int deleteVector(vector<string> v) {
+double deleteVector(vector<string> v) {
     auto start = high_resolution_clock::now();
 
     auto it = v.begin() + v.size() / 2;
@@ -250,7 +252,7 @@ int deleteVector(vector<string> v) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int deleteList(list<string> l) {
+double deleteList(list<string> l) {
     auto start = high_resolution_clock::now();
 
     auto it = l.begin();
@@ -263,7 +265,7 @@ int deleteList(list<string> l) {
     return duration_cast<nanoseconds>(end - start).count();
 }
 
-int deleteSet(set<string> s) {
+double deleteSet(set<string> s) {
     auto start = high_resolution_clock::now();
 
     auto it = s.begin();
