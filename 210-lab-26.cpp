@@ -13,6 +13,7 @@ using namespace std::chrono;
 
 const int SZ = 20000;
 const string INSERT_VAL = "TESTCODE";
+const int SIM = 15;
 
 // functions for read timing functions/also called to reset containers
 int readVector(vector<string>& v, string data[]);
@@ -50,73 +51,88 @@ int main() {
         cout << "File not found";
     }
 
-    double results[2][4][3] = {0};
-    // create containers
-    vector<string> vec;
-    list<string> lst;
-    set<string> st;
+    // double for avg values
+    //results[current/accum][OPP][TYPE]
+    double results[2][4][3] = {0}; 
+    
+    for (int i = 0; i < SIM; i++) {
+        // create containers
+        vector<string> vec;
+        list<string> lst;
+        set<string> st;
 
-    // times duration of reading/populating containers
-    int read_v = readVector(vec, data);
-    int read_l = readList(lst, data);
-    int read_s = readSet(st, data);
+        // times duration of reading/populating containers
+        results[0][0][0] = readVector(vec, data);
+        results[0][0][1] = readList(lst, data);
+        results[0][0][2] = readSet(st, data);
 
-    // sort vector
-    int sort_v = sortVector(vec);
+        // sort vector
+        results[0][1][0] = sortVector(vec);
 
-    // sort list
-    int sort_l = sortList(lst);
+        // sort list
+        results[0][1][1] = sortList(lst);
 
-    // sets already sorted, no need for function 
-    int sort_s = -1;
+        // sets already sorted, no need for function 
+        results[0][1][2] = 0;
 
-    // reset and insert
-    readVector(vec, data);
-    int insert_v = insertVector(vec);
+        // reset and insert
+        readVector(vec, data);
+        results[0][2][0] = insertVector(vec);
 
-    readList(lst, data);
-    int insert_l = insertList(lst);
+        readList(lst, data);
+        results[0][2][1] = insertList(lst);
 
-    readSet(st, data);
-    int insert_s = insertSet(st);
+        readSet(st, data);
+        results[0][2][2] = insertSet(st);
 
-    // reset and delete
-    readVector(vec, data);
-    int delete_v = deleteVector(vec);
+        // reset and delete
+        readVector(vec, data);
+        results[0][3][0] = deleteVector(vec);
 
-    readList(lst, data);
-    int delete_l = deleteList(lst);
+        readList(lst, data);
+        results[0][3][1] = deleteList(lst);
 
-    readSet(st, data);
-    int delete_s = deleteSet(st);
+        readSet(st, data);
+        results[0][3][2] = deleteSet(st);
+
+        //loops to add current data to accumulate
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 3; j++) {
+                results[1][i][j] += results[0][i][j];
+            }
+        }
+    }
+   
 
     // display all times
+    cout << "Number of simulations: " << SIM << endl;
+
     cout << left << setw(12) << "Operation"
         << setw(12) << "Vector"
         << setw(12) << "List"
         << setw(12) << "Set" << endl;
 
-    cout << left << setw(12) << "Read"
-        << setw(12) << read_v
-        << setw(12) << read_l
-        << setw(12) << read_s << endl;
+    cout << right << setw(12) << "Read"
+        << setw(12) << results[1][0][0] / SIM
+        << setw(12) << results[1][0][1] / SIM
+        << setw(12) << results[1][0][2] / SIM << endl;
 
-    cout << left << setw(12) << "Sort"
-        << setw(12) << sort_v
-        << setw(12) << sort_l
-        << setw(12) << sort_s << endl;
+    cout << right << setw(12) << "Sort"
+        << setw(12) << results[1][1][0] / SIM
+        << setw(12) << results[1][1][1] / SIM
+        << setw(12) << results[1][1][2] / SIM << endl;
 
-    cout << left << setw(12) << "Insert"
-        << setw(12) << insert_v
-        << setw(12) << insert_l
-        << setw(12) << insert_s << endl;
+    cout << right << setw(12) << "Insert"
+        << setw(12) << results[1][2][0] / SIM
+        << setw(12) << results[1][2][1] / SIM
+        << setw(12) << results[1][2][2] / SIM << endl;
 
-    cout << left << setw(12) << "Delete"
-        << setw(12) << delete_v
-        << setw(12) << delete_l
-        << setw(12) << delete_s << endl;
+    cout << right << setw(12) << "Delete"
+        << setw(12) << results[1][3][0] / SIM
+        << setw(12) << results[1][3][1] / SIM
+        << setw(12) << results[1][3][2] / SIM << endl;
 
-    return 0;
+
 }
 
 // read data into vector and return time
