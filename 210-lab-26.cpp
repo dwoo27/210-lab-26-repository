@@ -50,6 +50,7 @@ int main() {
         cout << "File not found";
     }
 
+    double results[2][4][3] = {0};
     // create containers
     vector<string> vec;
     list<string> lst;
