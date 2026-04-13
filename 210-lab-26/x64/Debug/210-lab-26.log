@@ -1,0 +1,57 @@
+﻿  210-lab-26.cpp
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(138,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(138,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(138,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(138,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(138,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(152,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(152,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(152,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(152,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(152,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(166,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(166,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(166,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(166,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(166,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(176,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(176,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(176,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(176,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(176,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(186,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(186,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(186,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(186,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(186,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(198,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(198,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(198,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(198,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(198,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(211,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(211,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(211,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(211,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(211,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(221,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(221,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(221,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(221,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(221,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(233,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(233,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(233,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(233,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(233,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(246,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(246,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(246,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(246,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(246,57): warning C4244:         ]
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(259,57): warning C4244: 'return': conversion from '_Rep' to 'int', possible loss of data
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(259,57): warning C4244:         with
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(259,57): warning C4244:         [
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(259,57): warning C4244:             _Rep=__int64
+C:\Users\dylan\source\repos\210-lab-26\210-lab-26.cpp(259,57): warning C4244:         ]
+  210-lab-26.vcxproj -> C:\Users\dylan\source\repos\210-lab-26\x64\Debug\210-lab-26.exe
